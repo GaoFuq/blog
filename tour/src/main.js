@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import '@/assets/style/border.css'//解决移动端px不一致
 import '@/assets/style/reset.css'
+import '@/assets/style/iconfont.css'
+
 import fastClick from 'fastClick'
 
 Vue.config.productionTip = false
