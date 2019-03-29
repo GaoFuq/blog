@@ -22,24 +22,25 @@ export default {
    text-align:center
    display:flex
 
-.back
-  float:left
-  width:.9rem
+	.back
+ 	 float:left
+ 	 width:.9rem
+
+
+	.search
+	  flex:1
+	  height:.5rem
+	  line-height:.5rem
+	  margin-top:.22rem
+	  margin-left:.2rem
+	  margin-right:.2rem
+	  border-radius:.5rem
+	  box-shadow:0 0 .01rem .02rem #999
+	  background:#fff
  
 
-.search
-  flex:1
-  height:.5rem
-  line-height:.5rem
-  margin-top:.22rem
-  margin-left:.2rem
-  margin-right:.2rem
-  border-radius:.5rem
-  box-shadow:0 0 .01rem .02rem #005
- 
-
-.city
-  float:right
-  width:1.4rem
+	.city
+	  float:right
+	  width:1.4rem
  
 </style>
