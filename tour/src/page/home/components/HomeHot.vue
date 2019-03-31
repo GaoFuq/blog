@@ -53,7 +53,7 @@
 
 <script>
 export default {
-  name: 'homeHot',
+  name: 'HomeHot',
 /*  props:{
     hotTrendList:Array,
     hotPriseList:Array,
@@ -155,6 +155,7 @@ export default {
       width:100%
       height:0
       padding-bottom:14.15%
+     
       .prise-sale
         float:left
         font-weight:bold
