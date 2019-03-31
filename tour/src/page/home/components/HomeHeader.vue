@@ -1,32 +1,67 @@
 <template>
- <div class="header">
-   <div class="back">
+ <div class="header" :class='[showHeader]'>
+   <div class="back" :class='[showBack]'>
      <span class="iconfont">&#xe641;</span>
    </div>
-   <div class="search">
+   <div class="search" :class='[showSearch]'>
      <span class="iconfont">&#xe647;</span>欢迎光临</div>
-   <div class="city">重庆<span class="iconfont">&#xe651;</span></div>
+   <div class="city" :class='[showCity]'>重庆<span class="iconfont">&#xe651;</span></div>
    </div>
 </template>
 
 <script>
 export default {
   name: 'HomeHeader',
+  data(){
+  	return{
+  		showHeader:'',
+  		showBack:'',
+  		showCity:'',
+  		showSearch:''
+  	}
+  	
+  },
+  methods:{
+    scrollChange(){
+      let height = document.documentElement.scrollTop
+      // console.log(height)
+      if(height>10){
+          this.showHeader='showHeader'
+          this.showBack='showBack'
+          this.showCity='showCity'
+          this.showSearch='showSearch'
+      }else{
+          this.showHeader=''
+          this.showBack=''
+          this.showCity=''
+          this.showSearch=''
+      }
+    }
+  },
+  mounted(){
+    window.addEventListener('scroll',this.scrollChange)
+  }
   
 }
 </script>
 
 <style lang="stylus" scoped>
+.showHeader
+  background:#fff
 .header
    line-height:.88rem
    text-align:center
    display:flex
-
+	
+	.showBack
+	  color:#000
 	.back
  	 float:left
  	 width:.9rem
 
-
+	.showSearch
+	  color:#000
+	  background:#eee
 	.search
 	  flex:1
 	  height:.5rem
@@ -36,9 +71,10 @@ export default {
 	  margin-right:.2rem
 	  border-radius:.5rem
 	  box-shadow:0 0 .01rem .02rem #999
-	  background:#fff
+	  
  
-
+	.showCity
+	  color:#000
 	.city
 	  float:right
 	  width:1.4rem
