@@ -135,7 +135,7 @@ export default {
       height:0
       padding-bottom:48.3%      
     .guess-content-img >img
-      max-width:100%
+      width:100%
     .guess-content-img >div
       position:absolute
       bottom:.2rem
