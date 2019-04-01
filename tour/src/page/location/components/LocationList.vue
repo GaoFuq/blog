@@ -3,7 +3,7 @@
   	<div>
 	<div class="present ttt">
       <div class="present-title"><div>当前</div></div>
-      <div class="present-detail"><div>正在获取位置信息</div></div>
+      <div class="present-detail"><div>{{this.city}}</div></div>
     </div>
     <div class="hot-city ttt">
       <div class="hot-city-title"><div>热门城市</div></div>
@@ -59,11 +59,12 @@
 
 <script>
 import BScroll from 'better-scroll'
-
+import BMap from 'BMap'
 export default {
   name: 'LocationList',
   data(){
   	return{
+      city:'',
   		hotCityList:[
   		  {
   			id:'001',
@@ -338,6 +339,16 @@ export default {
         easeTime:300
       }
   	 })
+
+     let map = new BMap.Map('map')
+     let myCity = new BMap.LocalCity()
+     myCity.get((result)=>{
+      if(result){
+        this.city = result.name
+      }else{
+        this.city = '正在获取位置信息'
+      }
+     })
    }
 }
 </script>
