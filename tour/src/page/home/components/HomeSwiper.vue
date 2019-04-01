@@ -11,7 +11,7 @@
     <swiper-slide>
       <img  class="swiper-img" src="https://pic5.40017.cn/03/000/28/73/rB5oQFxG7M2AOgxwAADChAKgVcA559_520x218_00.jpg" alt="xx">
     </swiper-slide> -->
-    <swiper-slide v-for="item of headerImg" :key="item.id">
+    <swiper-slide v-for="item of swiperList" :key="item.id">
       <img  class="swiper-img" :src="item.imgUrl" alt="dd">
     </swiper-slide>
     <!-- Optional controls -->
@@ -25,13 +25,16 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props:{
+    swiperList:Array//传值校验
+  },
   data(){
     return {
       swiperOption:{
         loop:true,
         pagination:'.swiper-pagination'
       },
-      headerImg:[
+     /* headerImg:[
         {
           id:'001',
           imgUrl:'https://pic5.40017.cn/03/000/71/c1/rB5oQFyCNUCAMP_sAAD2IbUPKZc944_520x218_00.jpg'
@@ -44,7 +47,7 @@ export default {
           id:'003',
           imgUrl: 'https://pic5.40017.cn/03/000/28/73/rB5oQFxG7M2AOgxwAADChAKgVcA559_520x218_00.jpg'
         },
-      ]
+      ]*/
     }
   }
   

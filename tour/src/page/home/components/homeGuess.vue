@@ -35,13 +35,13 @@
 <script>
 export default {
   name: 'HomeGuess',
-  // props:{
-  //   guessList:Array
-  // },
+   props:{
+     guessList:Array
+   },
   data(){
     return {
       guessDescChange:'',
-      guessList: [
+     /* guessList: [
         {
           id:'001',
           imgUrl:'https://pic4.40017.cn/scenery/destination/2017/02/08/18/ZTe8Qb_420x228_00.jpg',
@@ -65,7 +65,7 @@ export default {
          desc:'宿宜兴帕佛伦斯酒店，自选宜兴竹海风景区等，尊享60楼“云端”自助早餐，免费泳池健身房【踏青赏花】',
          distance:'酒店距景点19.9km',
          prise:'599'
-      },
+        },
         {
          id:'003',
          imgUrl:'https://pic4.40017.cn/scenery/destination/2017/02/08/18/ZTe8Qb_420x228_00.jpg',
@@ -73,8 +73,8 @@ export default {
          desc:'宿宜兴帕佛伦斯酒店，自选宜兴竹海风景区等，尊享60楼“云端”自助早餐，免费泳池健身房【踏青赏花】',
          distance:'酒店距景点19.9km',
          prise:'599'
-      }
-    ]
+        }
+    ]*/
     }
     
   },

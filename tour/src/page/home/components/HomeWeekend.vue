@@ -32,15 +32,18 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props:{
+    weekendList:Array
+  },
  
   data(){
     return {
       swiperOption:{
         freeMode:true,
         spaceBetween:20,//两张轮播图之间的间隔
-        slidesPerView:3//单页显示图片的张数
+        slidesPerView:3//单页显示图片的张数,默认为1
       },
-      weekendList:[
+     /* weekendList:[
         {
           id:'001',
           imgUrl:'https://pic5.40017.cn/01/000/00/9c/rBANC1vD9_GAb2qVAAD1zTnOfl0327_280x190_00.jpg',
@@ -66,7 +69,7 @@ export default {
           desc:'拈花湾',
           detail:'禅意假日 古韵风光'
         },
-      ]
+      ]*/
     }
   }
   

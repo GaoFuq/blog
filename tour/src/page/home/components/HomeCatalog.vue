@@ -3,17 +3,17 @@
  	
 	<div 
     class="icon" 
-    v-for="item of iconArray"
+    v-for="item of iconList"
     :key="item.id"
     >
 		<div >
       <img 
         class="img" 
-        :src="item.iconUrl"
-        :alt="item.alt" 
+        :src="[item.imgUrl]"
+        :alt="[item.desc]" 
         :class="[item.color]"
         >
-   <div class="desc">{{item.alt}}</div>
+   <div class="desc">{{item.desc}}</div>
     </div><!-- 元素绑定样式 -->
   
 	</div>
@@ -26,6 +26,9 @@
 
 export default {
   name: 'HomeCatalog',
+  props:{
+    iconList:Array
+  },
   data(){
     return{
       red:'red',
@@ -33,7 +36,7 @@ export default {
       green:'green',
       pink:'pink',
 
-      iconArray:[
+     /* iconArray:[
         {
           id:'001',
           iconUrl:'https://pic5.40017.cn/02/001/6d/e2/rBLkCFmEG8eALBI8AAAEA1xXmqI793.png',
@@ -58,7 +61,7 @@ export default {
           alt:'亲子游',
           color:'pink'
         },
-      ]
+      ]*/
     }
   }
   

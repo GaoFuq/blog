@@ -54,14 +54,14 @@
 <script>
 export default {
   name: 'HomeHot',
-/*  props:{
+  props:{
     hotTrendList:Array,
     hotPriseList:Array,
     hotContentList:Array
-  }*/
+  },
   data(){
     return{
-      hotContentList:[
+     /* hotContentList:[
         {
           id:'00001',
           imgUrl:'https://pic4.40017.cn/zzy/rimage/2016/12/15/15/LxfFsg_100x100_00.jpg',
@@ -89,7 +89,7 @@ export default {
           crite:'又到一年温泉季',
           imgUrl:'https://pic5.40017.cn/01/000/65/88/rBANC1usNjyAWsDJAACkawp55dU429_100x100_00.png'
         }
-      ]
+      ]*/
     }
   }
 }

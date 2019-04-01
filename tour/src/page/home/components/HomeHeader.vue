@@ -5,13 +5,15 @@
    </div>
    <div class="search" :class='[showSearch]'>
      <span class="iconfont">&#xe647;</span>欢迎光临</div>
-   <div class="city" :class='[showCity]'>重庆<span class="iconfont">&#xe651;</span></div>
+   <div class="city" :class='[showCity]'>{{this.city}}<span class="iconfont">&#xe651;</span></div>
    </div>
 </template>
 
 <script>
+
 export default {
   name: 'HomeHeader',
+  props:['city'],
   data(){
   	return{
   		showHeader:'',
