@@ -7,6 +7,7 @@
 
 <script>
 import Home from './page/home/Home'
+
 export default {
   name: 'App'
 }

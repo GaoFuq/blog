@@ -5,8 +5,11 @@
    </div>
    <div class="search" :class='[showSearch]'>
      <span class="iconfont">&#xe647;</span>欢迎光临</div>
-   <div class="city" :class='[showCity]'>{{this.city}}<span class="iconfont">&#xe651;</span></div>
-   </div>
+  <router-link to='/location'>
+    <div class="city" :class='[showCity]'>{{this.city}}<span class="iconfont">&#xe651;</span></div>
+  </router-link>
+ </div>
+  
 </template>
 
 <script>
