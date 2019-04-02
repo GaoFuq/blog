@@ -20,6 +20,9 @@
 
 export default {
   name: 'LocationRight',
+  props:{
+    rightList:Array
+  },
   data(){
   	return{
   		seen:false,
@@ -27,7 +30,7 @@ export default {
   			display:'none'
   		},
   		content:'',
-  		rightList:[
+  		/*rightList:[
   			{
   				id:'001',
   				content:'当前'
@@ -141,7 +144,7 @@ export default {
   				content:'Z'
   			},
   			
-  		]
+  		]*/
   	}
   },
   methods:{

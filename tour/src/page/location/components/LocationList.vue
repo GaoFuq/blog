@@ -12,7 +12,7 @@
           <li 
           v-for='item of hotCityList'
          :key='item.id'
-          >{{item.cityName}}</li> 
+          >{{item.name}}</li> 
         </ul>
       </div>
     </div>
@@ -49,7 +49,7 @@
           >
           <li  
           v-for='abc of ABC'
-          :key='abc.id'>{{abc.cityName}}</li>  
+          :key='abc.id'>{{abc.name}}</li>  
         </ul>
       </li>
       
@@ -68,7 +68,9 @@ import BMap from 'BMap'
 export default {
   name: 'LocationList',
   props:{//接收父组件传来的数据，并作校验
-    letter:String
+    letter:String,
+    hotCityList:Array,
+    LetterTabel:Object
   },
   watch:{//时刻监听的方法
     letter(){
@@ -89,7 +91,7 @@ export default {
   data(){
     return{
       city:'',
-      hotCityList:[
+     /* hotCityList:[
         {
         id:'001',
         cityName:'重庆'
@@ -126,8 +128,8 @@ export default {
         id:'009',
         cityName:'上海'
         }
-      ],
-      /*LetterTabel:[
+      ],*/
+      /*LetterTabel:[复杂版本
         {
           id:'1',
           letter:'A', 
@@ -156,137 +158,137 @@ export default {
         .
         .
       ],*/
-      LetterTabel:{
-        "A":[
-            {
-              id:'01',
-              cityName:'a1'
+       /* LetterTabel:{
+          "A":[
+              {
+                id:'01',
+                name:'a1'
 
-            },
-            {
-              id:'02',
-              cityName:'a2'
+              },
+              {
+                id:'02',
+                name:'a2'
 
-            },
-          ],
-        "B":[
-            {
-              id:'03',
-              cityName:'b1'
+              },
+            ],
+          "B":[
+              {
+                id:'03',
+                name:'b1'
 
-            },
-            {
-              id:'04',
-              cityName:'b2'
+              },
+              {
+                id:'04',
+                name:'b2'
 
-            },
-            {
-              id:'05',
-              cityName:'b3'
+              },
+              {
+                id:'05',
+                name:'b3'
 
-            },
-            {
-              id:'055',
-              cityName:'b1'
+              },
+              {
+                id:'055',
+                name:'b1'
 
-            },
-            {
-              id:'056',
-              cityName:'b2'
+              },
+              {
+                id:'056',
+                name:'b2'
 
-            },
-            {
-              id:'057',
-              cityName:'b3'
+              },
+              {
+                id:'057',
+                name:'b3'
 
-            },
-            {
-              id:'058',
-              cityName:'b1'
+              },
+              {
+                id:'058',
+                name:'b1'
 
-            },
-            {
-              id:'059',
-              cityName:'b2'
+              },
+              {
+                id:'059',
+                name:'b2'
 
-            },
-            {
-              id:'060',
-              cityName:'b3'
+              },
+              {
+                id:'060',
+                name:'b3'
 
-            },
-          ],
-        "C":[
-            {
-              id:'06',
-              cityName:'c1'
+              },
+            ],
+          "C":[
+              {
+                id:'06',
+                name:'c1'
 
-            },
-            {
-              id:'07',
-              cityName:'c2'
+              },
+              {
+                id:'07',
+                name:'c2'
 
-            },
-            {
-              id:'08',
-              cityName:'c3'
+              },
+              {
+                id:'08',
+                name:'c3'
 
-            },
-            {
-              id:'077',
-              cityName:'c1'
+              },
+              {
+                id:'077',
+                name:'c1'
 
-            },
-            {
-              id:'078',
-              cityName:'c2'
+              },
+              {
+                id:'078',
+                name:'c2'
 
-            },
-            {
-              id:'079',
-              cityName:'c3'
+              },
+              {
+                id:'079',
+                name:'c3'
 
-            },
-            {
-              id:'080',
-              cityName:'c1'
+              },
+              {
+                id:'080',
+                name:'c1'
 
-            },
-            {
-              id:'081',
-              cityName:'c2'
+              },
+              {
+                id:'081',
+                name:'c2'
 
-            },
-            {
-              id:'082',
-              cityName:'c3'
+              },
+              {
+                id:'082',
+                name:'c3'
 
-            },
-          ],
-           "Z":[
-            {
-              id:'44',
-              cityName:'哈罗'
+              },
+            ],
+             "Z":[
+              {
+                id:'44',
+                name:'哈罗'
 
-            },
-            {
-              id:'42',
-              cityName:'你好'
+              },
+              {
+                id:'42',
+                name:'你好'
 
-            },
-            {
-              id:'41',
-              cityName:'欢迎'
+              },
+              {
+                id:'41',
+                name:'欢迎'
 
-            },
-            {
-              id:'40',
-              cityName:'光临'
+              },
+              {
+                id:'40',
+                name:'光临'
 
-            },
-          ]
-          
-      }
+              },
+            ]
+            
+        }*/
       
     }
     
