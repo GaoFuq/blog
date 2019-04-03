@@ -1,22 +1,177 @@
 
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
-    <title>gfq blog</title>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"> -->
+    <meta name="keywords" content="HTML,前端,博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+    <title>高富强的个人博客</title>
+    <link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.css" rel="stylesheet">
     <style type="text/css" media="screen">
-      
-    div{
-      width:400px;
-      font-size:30px;
-      margin:100px auto;
+      html{font-size:100px;} 
+      body{font-size:14px;font-size:.14rem ;} 
+      @media only screen and (min-width: 800px) {/* 大于800px时 */
+        body{
+          background: #ddd;
+          font-size:.2rem;
+          font-family:tahoma,arial,"Hiragino Sans GB","微软雅黑",simsun,sans-serif;
+        }
       }
+      h1,h2,h3,ul,li,p,b,body,input,button{
+        margin: 0;
+        padding: 0;
+      }
+      a,ul,li{
+        text-decoration: none;
+        list-style-type: none;
+        color:#fff;
+      }
+      /* header开始 */
+      .welcome{
+        background: #ddd;
+        position: relative;
+      }
+      .welcome .wel-content{
+        color:orange;
+        position: absolute;
+        right: -3rem;
+        top:0;
+        animation:moveL 20s  infinite cubic-bezier(0.55, 0.09, 0.68, 0.53);
+      }
+      
+      header{
+        color:#ffc;
+        background: #565;
+        width: 100%;
+        height: 8vw;
+        display: flex;
+        justify-content: center;
+       line-height: 9vw;
+      }
+      header:hover .blog{
+        opacity: 0.5;
+      }
+      header:hover .hi{
+        animation: myHeartBeat .8s  linear;
+      }
+      .hi{
+        display: inline-block;
+        font-size: 6vw;
+      }
+      .up{
+        display:inline-block;
+        font-size: .1vw;
+        animation: updown 2s infinite linear;
+      }
+      .blog{
+        display:inline-block;
+        font-size: .3vw;
+        font-weight: 400;
+      }
+      nav>ul{
+        background: #4a4a4a;
+        width: 100%;
+        height: 4vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+      }
+      nav>ul>li{
+        display: inline-block;
+        height: 100%;
+        line-height: 4vw;
+        flex-grow:1;
+        text-align: center;
+      }
+      nav>ul>li:hover{
+        background:#565; 
+      }
+      .box{
+        width: 100vw;
+        height: 5rem;
+        background: #999;
+        display: flex;
+      }
+      .box article{
+        width: 70vw;
+        height: 5rem;
+        background: red;
+        margin-left: .5rem
+      }
+      .box aside{
+        width: 30vw;
+        background: green;
+        height: 3rem;
+        margin-right: .5rem
+      }
+
+      @keyframes updown{
+        100%{
+          transform: translate(0,-.8rem);
+          color:red;
+          opacity: 0;
+        }
+      }
+       @keyframes myHeartBeat{
+        30%{
+          transform: scale(1.4);
+        }
+        70%{
+          transform: scale(1);
+        }
+         100%{
+          transform: scale(1.6);
+        }
+      }
+       @keyframes moveL{
+        100%{
+          transform: translate(-150vw,0);
+          color:#fff;
+        }
+      }
+      
     </style>
   </head>
   <body>
-		<a href="./tourindex.html" alt="sss">点击跳转到tour项目</a>
-     <div>儿砸，看这里！！</div>
+
+    <div class="welcome">
+      <div class='wel-content'> hi,欢迎来到高富强的个人博客 </div>
+      </div>
+	 <header>
+      
+     <div class="header-container">
+        <h1>
+          <span class="hi animated heartBeat">嗨</span><span class="up">起来！</span>
+          <span class="blog">高富强()=&gt;blog</span>
+        </h1>
+     </div>
+   </header>
+   <nav>
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">笔记</a></li>
+        <li><a href="#">随笔</a></li>
+        <li><a href="#">关于自己</a></li>
+        <li><a href="#">给我留言</a></li>
+
+      </ul>
+   </nav>	
+   <div class="box">
+      <article>
+        <div class="banner"></div>
+        <div class="main"></div>
+      </article>
+      <aside>
+        <div class="me"></div>
+        <div class="msg-board"></div>
+      </aside>
+
  
+   </div>
+  
   </body>
 </html>
