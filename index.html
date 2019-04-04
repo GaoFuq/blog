@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,6 +14,7 @@
       body{font-size:14px;font-size:.14rem ;} 
       @media only screen and (min-width: 800px) {/* 大于800px时 */
         body{
+          width:100vw;
           background: #ddd;
           font-size:.2rem;
           font-family:tahoma,arial,"Hiragino Sans GB","微软雅黑",simsun,sans-serif;
@@ -33,24 +33,26 @@
       .welcome{
         background: #ddd;
         position: relative;
+        
       }
       .welcome .wel-content{
-	font-size:1.2vw;
+        font-size: 1.2vw;
         color:orange;
         position: absolute;
-        right: -3rem;
+        right: 0;
         top:0;
         animation:moveL 20s  infinite cubic-bezier(0.55, 0.09, 0.68, 0.53);
+        z-index: 100;
       }
       
       header{
         color:#ffc;
         background: #b3a3ac;
-        width: 100%;
+        width: 100vw;
         height: 8vw;
         display: flex;
         justify-content: center;
-       line-height: 9vw;
+        line-height: 9vw;
       }
       header:hover .blog{
         opacity: 0.5;
@@ -84,7 +86,7 @@
       nav>ul>li{
         display: inline-block;
         height: 100%;
-	font-size: 1.5vw;
+        font-size: 1.5vw;
         line-height: 4vw;
         flex-grow:1;
         text-align: center;
@@ -104,13 +106,15 @@
         background: red;
         margin-left: .5rem
       }
-      .box aside{
-        width: 30vw;
-        background: green;
-        height: 3rem;
-        margin-right: .5rem
+      .main{
+        text-align: center;
       }
-
+      .main a{
+        font-size: 1.6vw;
+        text-shadow: -4px -1px 3px #000;
+        
+        box-shadow:-2px -2px 3px #333 inset;
+      }
       @keyframes updown{
         100%{
           transform: translate(0,-.8rem);
@@ -164,8 +168,9 @@
    </nav>	
    <div class="box">
       <article>
-        <div class="banner"></div>
-        <div class="main"></div>
+  <div class="main">
+    <a href="./tourindex.html">vue学习的一个项目</a>
+  </div>
       </article>
       <aside>
         <div class="me"></div>
@@ -175,5 +180,8 @@
  
    </div>
   
+<script>
+
+</script>
   </body>
 </html>
